@@ -45,8 +45,6 @@ export class AppComponent implements OnInit {
     this.userService.addUser(user2);
     const user3 = new UserModel(1003, 'Mr', 'Michael', 'Lowe', 'Male', 'MIKELOWE', new Date(4991400000));
     this.userService.addUser(user3);
-    const user4 = new UserModel(1004, 'Mr', 'Stephen', 'Fry', 'Male', 'STEPHFRY', new Date(301948200000));
-    this.userService.addUser(user4);
 
     this.users = this.userService.getUsers();
   }
