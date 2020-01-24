@@ -1,0 +1,21 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#">{{ title }}</a>
+  </div>
+</nav>
+<div class="container">
+  <button type="button" class="btn btn-primary" (click)="callCloudFunction()">
+    {{ !messageFromCloud ? 'Call Cloud Function' : messageFromCloud }}
+  </button>
+  <div style="margin: 20px 0;"></div>
+  <div class="list-group" *ngFor="let user of users">
+    <a href="#" class="list-group-item" [ngClass]="{
+                    'list-group-item-info' : (user.getGender() === 'Female'),
+                    'list-group-item-success': (user.getGender() === 'Male')
+                  }" (click)="selectUser(user)">
+      <h4 class="list-group-item-heading">
+        {{ user.getSalutation() + ' ' + user.getFirstName() + ' ' + user.getLastName() }}</h4>
+    </a>
+  </div>
+  <app-user [user]="user" *ngIf="!!user"></app-user>
+</div>

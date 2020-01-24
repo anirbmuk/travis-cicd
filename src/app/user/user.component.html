@@ -1,0 +1,5 @@
+<div class="jumbotron">
+  <h1>{{ 'Name: ' + user.getSalutation() + ' ' + user.getFirstName() + ' ' + user.getLastName() }}</h1>
+  <p>{{ 'Born: ' + (user.getDateOfBirth() | date : 'fullDate') }}</p>
+  <p>{{ 'Email: ' + user.getEmail() }}</p>
+</div>
