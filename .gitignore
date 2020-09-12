@@ -6,6 +6,7 @@
 /out-tsc
 # Only exists if Bazel was run
 /bazel-out
+/.firebase
 
 # dependencies
 /node_modules
@@ -40,6 +41,8 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+debug.log
+firebase-debug.log
 
 # System Files
 .DS_Store
