@@ -11,7 +11,7 @@ cache:
 before_script:
  - npm install -g firebase-tools
  - cd functions
- - npm ci
+ - npm install
 
 script:
   - tslint --project tsconfig.json
