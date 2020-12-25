@@ -1,21 +1,21 @@
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;" role="navigation">
   <div class="navbar-header">
     <a class="navbar-brand" href="#">{{ title }}</a>
   </div>
 </nav>
-<div class="container">
+<div class="container" style="margin-top: 2rem;">
   <button type="button" class="btn btn-primary" (click)="callCloudFunction()">
-    {{ !messageFromCloud ? 'Call Cloud Function' : messageFromCloud }}
+    {{ autocicdFunctionCall$ | async }}
   </button>
   <div style="margin: 20px 0;"></div>
-  <div class="list-group" *ngFor="let user of users">
-    <a href="#" class="list-group-item" [ngClass]="{
+  <div class="list-group" *ngFor="let user of users" style="cursor: pointer;">
+    <span class="list-group-item" [ngClass]="{
                     'list-group-item-info' : (user.getGender() === 'Female'),
                     'list-group-item-success': (user.getGender() === 'Male')
                   }" (click)="selectUser(user)">
       <h4 class="list-group-item-heading">
         {{ user.getSalutation() + ' ' + user.getFirstName() + ' ' + user.getLastName() }}</h4>
-    </a>
+      </span>
   </div>
   <app-user [user]="user" *ngIf="!!user"></app-user>
 </div>

@@ -8,6 +8,7 @@ import { UserComponent } from './user/user.component';
 
 import { UserService } from './service/user.service';
 import { FirebaseService } from './service/firebase.service';
+import { FunctionService } from './service/function.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { FirebaseService } from './service/firebase.service';
     BrowserModule,
     HttpClientModule
   ],
-  providers: [UserService, FirebaseService],
+  providers: [UserService, FirebaseService, FunctionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
