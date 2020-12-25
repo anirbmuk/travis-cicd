@@ -1,5 +1,8 @@
+import { Injectable } from '@angular/core';
+
 import { UserModel } from '../model/user.model';
 
+@Injectable()
 export class UserService {
 
   private users: UserModel[] = [];
